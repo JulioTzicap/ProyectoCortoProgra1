@@ -1,3 +1,8 @@
+/*
+Julio Alejandro Tzicap Santiago-202308013
+Shairy Anali Gomez Castillo-202308092
+Roberto Jose Ramos Lopez-202308092
+*/
 #include <iostream>//La Biblioteca principal.
 #include <string>//Biblioteca para guardar texto.
 #include <cstdlib>//Biblioteca para limpiar la pantalla.
