@@ -30,7 +30,7 @@ void limpiar (int pantalla){//Función que nos ayuda a limpiar la pantalla cada 
 
 int main (){
     string jugador_1; string jugador_2; //Variables de los nombres
-    int limpio;//Variables para limpiar
+    int limpio = 0;//Variables para limpiar
     int quitar_fila, quitar_ficha;//Variables para seleccionar la fila y eliminar las fichas.
     char tecla;//Variable es para volver a jugar.
 
