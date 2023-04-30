@@ -1,3 +1,8 @@
+/*
+Julio Alejandro Tzicap Santiago-202308013
+Shairy Anali Gomez Castillo-202308092
+Roberto Jose Ramos Lopez-202308092
+*/
 #include <iostream>//La Biblioteca principal.
 #include <string>//Biblioteca para guardar texto.
 #include <cstdlib>//Biblioteca para limpiar la pantalla.
@@ -42,7 +47,7 @@ int main (){
 
     do {
         limpiar (limpio);
-        int fila_1=3, fila_2=5, fila_3 = 7; //Variables para los gráficos
+        int fila_1=3, fila_2=5, fila_3 = 7; //Variables para los gráficos.
         bool turno_jugador_1 = true;//Variable para verificar que turno corresponde, aqui se usa la variable booleana requerida.
 
         while (fila_1 + fila_2 + fila_3 > 1){
@@ -65,7 +70,7 @@ int main (){
                 cout<<"Que ficha desea quitar (1 al "<<fila_1<<") :";
                 cin>>quitar_ficha;
 
-                //Validación de ficha
+                //Validación de ficha.
                 while (quitar_ficha < 1 || quitar_ficha > fila_1) {
                     cout << "Por favor, ingrese un número válido de fichas a quitar (1 al " << fila_1 << "): ";
                     cin >> quitar_ficha;
@@ -100,9 +105,7 @@ int main (){
                 turno_jugador_1 = !turno_jugador_1;//Para cambiar de jugador
             }
             cout<<endl;
-        }
-
-        if((fila_1 + fila_2 + fila_3) == 1){
+        }if((fila_1 + fila_2 + fila_3) == 1){
             if(turno_jugador_1) {
                 cout<<"El ganador es: "<<jugador_1<<endl;
             } else {
@@ -118,3 +121,5 @@ int main (){
 
     return 0;
 }
+
+        
