@@ -105,9 +105,7 @@ int main (){
                 turno_jugador_1 = !turno_jugador_1;//Para cambiar de jugador
             }
             cout<<endl;
-        }
-
-        if((fila_1 + fila_2 + fila_3) == 1){
+        }if((fila_1 + fila_2 + fila_3) == 1){
             if(turno_jugador_1) {
                 cout<<"El ganador es: "<<jugador_1<<endl;
             } else {
@@ -123,3 +121,5 @@ int main (){
 
     return 0;
 }
+
+        
