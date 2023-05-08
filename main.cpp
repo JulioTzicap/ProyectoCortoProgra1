@@ -7,6 +7,10 @@ Roberto Jose Ramos Lopez-202308092
 #include <string>//Biblioteca para guardar texto.
 #include <cstdlib>//Biblioteca para limpiar la pantalla.
 
+#define victoria 3
+#define empate 1
+
+
 using namespace std;
 string nombres ( string player_1, string player_2){ //Declaramos una función que registre el nombre de los 2 jugadores.
     string jugadores;
@@ -47,14 +51,18 @@ int main (){
 
     do {
         limpiar (limpio);
+        int puntos = puntos;
+        int puntos_2 = puntos_2;
         int fila_1=3, fila_2=5, fila_3 = 7; //Variables para los gráficos.
         bool turno_jugador_1 = true;//Variable para verificar que turno corresponde, aqui se usa la variable booleana requerida.
 
         while (fila_1 + fila_2 + fila_3 > 1){
             if (turno_jugador_1) {
                 cout<<"Es turno de: "<<jugador_1<<endl;
+                cout<<"Puntos: "<<puntos<<endl;
             } else {
                 cout<<"Es turno de: "<<jugador_2<<endl;
+                cout<<"Puntos: "<<puntos_2<<endl;
             }
             graficos(fila_1, fila_2, fila_3);
             cout<<"Que fila desea modificar (del 1 al 3): ";
@@ -105,13 +113,13 @@ int main (){
                 turno_jugador_1 = !turno_jugador_1;//Para cambiar de jugador
             }
             cout<<endl;
-            graficos(fila_1, fila_2, fila_3);
-            cout<<endl;
         }if((fila_1 + fila_2 + fila_3) == 1){
             if(turno_jugador_1) {
                 cout<<"El ganador es: "<<jugador_1<<endl;
+                puntos += 3;
             } else {
                 cout<<"El ganador es: "<<jugador_2<<endl;
+                puntos_2 += 3;
             }
         } else if((fila_1 + fila_2 + fila_3) == 0) {
             cout<<"Empate"<<endl;
@@ -123,4 +131,3 @@ int main (){
 
     return 0;
 }
-
