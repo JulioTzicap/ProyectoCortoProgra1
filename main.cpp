@@ -1,16 +1,16 @@
 /*
 Julio Alejandro Tzicap Santiago-202308013
 Shairy Anali Gomez Castillo-202308092
-Roberto Jose Ramos Lopez-202308092
+Roberto Jose Ramos Lopez-202308021
 */
 #include <iostream>//La Biblioteca principal.
 #include <string>//Biblioteca para guardar texto.
 #include <cstdlib>//Biblioteca para limpiar la pantalla.
 
 using namespace std;
-string nombres ( string player_1, string player_2){ //Declaramos una función que registre el nombre de los 2 jugadores.
+string nombres ( string persona_1, string persona_2){ //Declaramos una función que registre el nombre de los 2 jugadores.
     string jugadores;
-    jugadores = player_1 + "" + player_2;
+    jugadores = persona_1 + "" + persona_2;
     return jugadores;
 }
 void fichas (int filas){ //Declaramo una función que dibuje las fichas.
@@ -117,19 +117,19 @@ int main (){
             if(turno_jugador_1) {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
-                cout<<"El ganador es: "<<jugador_1<<endl;
+                cout<<"Victoria de: "<<jugador_1<<endl;
                 puntos += 3;
                 cout<<"Puntos: "<<puntos<<endl;
-                cout<<"El perdedor es: "<<jugador_2<<endl;
+                cout<<"Derrota de: "<<jugador_2<<endl;
                 cout<<"Puntos: "<<puntos_2<<endl;
 
             } else {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
-                cout<<"El ganador es: "<<jugador_2<<endl;
+                cout<<"Victoria de: "<<jugador_2<<endl;
                 puntos_2 += 3;
                 cout<<"Puntos: "<<puntos_2<<endl;
-                cout<<"El perdedor es: "<<jugador_1<<endl;
+                cout<<"Derrota de: "<<jugador_1<<endl;
                 cout<<"Puntos: "<<puntos<<endl;
             }
 
