@@ -39,6 +39,8 @@ void limpiar (int pantalla){//Función que nos ayuda a limpiar la pantalla cada 
 
 int main (){
     string jugador_1; string jugador_2; //Variables de los nombres
+    int puntos = 0;
+    int puntos_2 = 0;
     int limpio = 0;//Variables para limpiar
     int quitar_fila, quitar_ficha;//Variables para seleccionar la fila y eliminar las fichas.
     char tecla;//Variable es para volver a jugar.
@@ -51,8 +53,8 @@ int main (){
 
     do {
         limpiar (limpio);
-        int puntos = puntos;
-        int puntos_2 = puntos_2;
+        puntos = puntos;
+        puntos_2 = puntos_2;
         int fila_1=3, fila_2=5, fila_3 = 7; //Variables para los gráficos.
         bool turno_jugador_1 = true;//Variable para verificar que turno corresponde, aqui se usa la variable booleana requerida.
 
@@ -117,12 +119,19 @@ int main (){
             if(turno_jugador_1) {
                 cout<<"El ganador es: "<<jugador_1<<endl;
                 puntos += 3;
+                 cout<<"Puntos: "<<puntos<<endl;
             } else {
                 cout<<"El ganador es: "<<jugador_2<<endl;
                 puntos_2 += 3;
+                cout<<"Puntos: "<<puntos_2<<endl;
             }
         } else if((fila_1 + fila_2 + fila_3) == 0) {
             cout<<"Empate"<<endl;
+            puntos+= 1;
+            puntos_2+=1;
+            cout<<"Puntos de: "<<jugador_1<<" son: "<<puntos<<endl;
+            cout<<"Puntos de: "<<jugador_2<<" son: "<<puntos_2<<endl;
+
         }
         cout<<"Presione la letra C para continuar jugando.\nO Presione cualquier tecla para salir del juego \nSeguido de su seleccion presione enter\n";
         cin>>tecla;
