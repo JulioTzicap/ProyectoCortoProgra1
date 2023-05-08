@@ -113,7 +113,7 @@ int main (){
             cout<<endl;
 
         }if((fila_1 + fila_2 + fila_3) == 1){
-
+      //Sumatoria cuando gana el jugador 1
             if(turno_jugador_1) {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
@@ -122,7 +122,7 @@ int main (){
                 cout<<"Puntos: "<<puntos<<endl;
                 cout<<"Derrota de: "<<jugador_2<<endl;
                 cout<<"Puntos: "<<puntos_2<<endl;
-
+    //Sumatoria cuando gana el jugador 2
             } else {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
@@ -132,7 +132,7 @@ int main (){
                 cout<<"Derrota de: "<<jugador_1<<endl;
                 cout<<"Puntos: "<<puntos<<endl;
             }
-
+        //Sumatoria en caso de empate
         } else if((fila_1 + fila_2 + fila_3) == 0) {
             graficos(fila_1, fila_2, fila_3);
             cout<<endl;
@@ -147,7 +147,7 @@ int main (){
         cin>>tecla;
 
     }while (tecla=='C' || tecla=='c');
-
+    //Se determina quien es el ganador de la partida
     if (puntos>puntos_2){
         cout<<"\nEl ganador de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
         cout<<"El perdedor de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
