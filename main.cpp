@@ -7,10 +7,6 @@ Roberto Jose Ramos Lopez-202308092
 #include <string>//Biblioteca para guardar texto.
 #include <cstdlib>//Biblioteca para limpiar la pantalla.
 
-#define victoria 3
-#define empate 1
-
-
 using namespace std;
 string nombres ( string player_1, string player_2){ //Declaramos una función que registre el nombre de los 2 jugadores.
     string jugadores;
