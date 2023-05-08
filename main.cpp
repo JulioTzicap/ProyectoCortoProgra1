@@ -143,10 +143,18 @@ int main (){
             cout<<"Puntos de: "<<jugador_2<<" son: "<<puntos_2<<endl;
 
         }
-        cout<<"Presione la letra C para continuar jugando.\nO Presione cualquier tecla para salir del juego \nSeguido de su seleccion presione enter\n";
+        cout<<"\nPresione la letra C para continuar jugando.\nO Presione cualquier tecla para salir del juego \nSeguido de su seleccion presione enter\n";
         cin>>tecla;
 
     }while (tecla=='C' || tecla=='c');
+
+    if (puntos>puntos_2){
+        cout<<"\nEl ganador de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
+    }else if (puntos_2>puntos){
+         cout<<"\nEl ganador de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
+    }else{
+        cout<<"\nAmbos jugadores empataron la partida"<<endl;
+    }
 
     return 0;
 }
