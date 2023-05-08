@@ -119,7 +119,9 @@ int main (){
                 cout<<endl;
                 cout<<"El ganador es: "<<jugador_1<<endl;
                 puntos += 3;
-                 cout<<"Puntos: "<<puntos<<endl;
+                cout<<"Puntos: "<<puntos<<endl;
+                cout<<"El perdedor es: "<<jugador_2<<endl;
+                cout<<"Puntos: "<<puntos_2<<endl;
 
             } else {
                 graficos(fila_1, fila_2, fila_3);
@@ -127,6 +129,8 @@ int main (){
                 cout<<"El ganador es: "<<jugador_2<<endl;
                 puntos_2 += 3;
                 cout<<"Puntos: "<<puntos_2<<endl;
+                cout<<"El perdedor es: "<<jugador_1<<endl;
+                cout<<"Puntos: "<<puntos<<endl;
             }
 
         } else if((fila_1 + fila_2 + fila_3) == 0) {
@@ -146,10 +150,15 @@ int main (){
 
     if (puntos>puntos_2){
         cout<<"\nEl ganador de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
+        cout<<"El perdedor de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
+
     }else if (puntos_2>puntos){
          cout<<"\nEl ganador de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
+         cout<<"El perdedor de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
     }else{
         cout<<"\nAmbos jugadores empataron la partida"<<endl;
+        cout<<"El jugador "<<jugador_1<<" con "<<puntos<<" puntos."<<endl;
+        cout<<"El jugador "<<jugador_2<<" con "<<puntos_2<<" puntos."<<endl;
     }
 
     return 0;
