@@ -115,17 +115,27 @@ int main (){
                 turno_jugador_1 = !turno_jugador_1;//Para cambiar de jugador
             }
             cout<<endl;
+
         }if((fila_1 + fila_2 + fila_3) == 1){
+
             if(turno_jugador_1) {
+                graficos(fila_1, fila_2, fila_3);
+                cout<<endl;
                 cout<<"El ganador es: "<<jugador_1<<endl;
                 puntos += 3;
                  cout<<"Puntos: "<<puntos<<endl;
+
             } else {
+                graficos(fila_1, fila_2, fila_3);
+                cout<<endl;
                 cout<<"El ganador es: "<<jugador_2<<endl;
                 puntos_2 += 3;
                 cout<<"Puntos: "<<puntos_2<<endl;
             }
+
         } else if((fila_1 + fila_2 + fila_3) == 0) {
+            graficos(fila_1, fila_2, fila_3);
+            cout<<endl;
             cout<<"Empate"<<endl;
             puntos+= 1;
             puntos_2+=1;
