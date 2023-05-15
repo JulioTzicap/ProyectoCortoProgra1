@@ -123,8 +123,8 @@ int main (){
             cout<<"Empate"<<endl;
             puntos+= 1;
             puntos_2+=1;
-            cout<<"Puntos de "<<jugador_1<<" son: "<<puntos<<endl;
-            cout<<"Puntos de "<<jugador_2<<" son: "<<puntos_2<<endl;
+            cout<<"Puntos de "<<jugador_1<<" : "<<puntos<<endl;
+            cout<<"Puntos de "<<jugador_2<<" : "<<puntos_2<<endl;
         }
         cout<<"\nPresione la letra C para continuar jugando.\nO Presione cualquier tecla para salir del juego \nSeguido de su seleccion presione enter \n";
         cin>>tecla;
