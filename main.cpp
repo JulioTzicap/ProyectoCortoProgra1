@@ -48,21 +48,21 @@ int main (){
     cin>>jugador_2;
 
     do {
-        limpiar (limpio);
-        puntos = puntos;
+        limpiar (limpio); //Llamamos a la funcion limpiar.
+        puntos = puntos; //Se reasignan los valores
         puntos_2 = puntos_2;
         int fila_1=3, fila_2=5, fila_3 = 7; //Variables para los gráficos.
         bool turno_jugador_1 = true;//Variable para verificar que turno corresponde, aqui se usa la variable booleana requerida.
 
-        while (fila_1 + fila_2 + fila_3 > 1){
-            if (turno_jugador_1) {
+        while (fila_1 + fila_2 + fila_3 > 1){ //while que ejecuta el juego.
+            if (turno_jugador_1) { //Verificamos que turno es
                 cout<<"Es turno de: "<<jugador_1<<endl;
                 cout<<"Puntos: "<<puntos<<endl;
             } else {
                 cout<<"Es turno de: "<<jugador_2<<endl;
                 cout<<"Puntos: "<<puntos_2<<endl;
             }
-            graficos(fila_1, fila_2, fila_3);
+            graficos(fila_1, fila_2, fila_3); //Llamamos a la funcion graficos
             cout<<"Que fila desea modificar (del 1 al 3): ";
             cin>>quitar_fila;
 
@@ -76,13 +76,14 @@ int main (){
                 cout<<"Que ficha desea quitar (1 al "<<fila_1<<") :";
                 cin>>quitar_ficha;
 
-                //Validación de ficha.
+                //Validacion de ficha.
                 while (quitar_ficha < 1 || quitar_ficha > fila_1) {
                     cout << "Por favor, ingrese un número válido de fichas a quitar (1 al " << fila_1 << "): ";
                     cin >> quitar_ficha;
                 }
 
-                fila_1 -= quitar_ficha;
+                fila_1 -= quitar_ficha; //Restamos lo que el usuario escoga
+
             } else if (quitar_fila == 2) {
                 cout<<"Que ficha desea quitar (1 al "<<fila_2<<"): ";
                 cin>>quitar_ficha;
@@ -113,16 +114,16 @@ int main (){
             cout<<endl;
 
         }if((fila_1 + fila_2 + fila_3) == 1){
-      //Sumatoria cuando gana el jugador 1
+            //Sumatoria cuando gana el jugador 1
             if(turno_jugador_1) {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
                 cout<<"Victoria de: "<<jugador_1<<endl;
-                puntos += 3;
+                puntos += 3;//Suma por victoria
                 cout<<"Puntos: "<<puntos<<endl;
                 cout<<"Derrota de: "<<jugador_2<<endl;
                 cout<<"Puntos: "<<puntos_2<<endl;
-    //Sumatoria cuando gana el jugador 2
+            //Sumatoria cuando gana el jugador 2
             } else {
                 graficos(fila_1, fila_2, fila_3);
                 cout<<endl;
@@ -139,27 +140,30 @@ int main (){
             cout<<"Empate"<<endl;
             puntos+= 1;
             puntos_2+=1;
-            cout<<"Puntos de: "<<jugador_1<<" son: "<<puntos<<endl;
-            cout<<"Puntos de: "<<jugador_2<<" son: "<<puntos_2<<endl;
+            cout<<"Puntos de "<<jugador_1<<" son: "<<puntos<<endl;
+            cout<<"Puntos de "<<jugador_2<<" son: "<<puntos_2<<endl;
 
         }
         cout<<"\nPresione la letra C para continuar jugando.\nO Presione cualquier tecla para salir del juego \nSeguido de su seleccion presione enter\n";
         cin>>tecla;
 
     }while (tecla=='C' || tecla=='c');
+
+    limpiar (limpio);
     //Se determina quien es el ganador de la partida
     if (puntos>puntos_2){
-        cout<<"\nEl ganador de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
-        cout<<"El perdedor de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
+        cout<<jugador_1<<" gana con un total de "<<puntos<<" puntos."<<endl;
+        cout<<jugador_2<<" pierde con un total de "<<puntos_2<<" puntos."<<endl;
 
     }else if (puntos_2>puntos){
-         cout<<"\nEl ganador de la partida es "<<jugador_2<<" con un total de "<<puntos_2<<" puntos."<<endl;
-         cout<<"El perdedor de la partida es "<<jugador_1<<" con un total de "<<puntos<<" puntos."<<endl;
+         cout<<jugador_2<<" gana con un total de "<<puntos_2<<" puntos."<<endl;
+         cout<<jugador_1<<" pierde con un total de "<<puntos<<" puntos."<<endl;
     }else{
         cout<<"\nAmbos jugadores empataron la partida"<<endl;
-        cout<<"El jugador "<<jugador_1<<" con "<<puntos<<" puntos."<<endl;
-        cout<<"El jugador "<<jugador_2<<" con "<<puntos_2<<" puntos."<<endl;
+        cout<<jugador_1<<" con "<<puntos<<" puntos."<<endl;
+        cout<<jugador_2<<" con "<<puntos_2<<" puntos."<<endl;
     }
-
+    cout<<"\nFin de la partida.";
+    cout<<endl;
     return 0;
 }
